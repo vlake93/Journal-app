@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration[7.0]
       t.string :name
       t.text :details
       t.date :date
-      t.reference :category
+      t.references :category
 
       t.timestamps
     end

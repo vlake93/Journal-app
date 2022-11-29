@@ -38,6 +38,14 @@ class CategoryController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    @category = Category.find(params[:id])
+    if @category.present?
+      @category.destroy
+    end
+    redirect_to comic_home_path(@category)
+end
   
   private
 
