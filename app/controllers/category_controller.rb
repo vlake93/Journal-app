@@ -7,6 +7,7 @@ class CategoryController < ApplicationController
   def show
     category = Category.find(params[:id])
     render :show
+  end
 
   def new 
     category = Category.new
@@ -45,12 +46,11 @@ class CategoryController < ApplicationController
       @category.destroy
     end
     redirect_to comic_home_path(@category)
-end
+  end
   
   private
 
   def category_params
     params.require(:category).permit(:name, :details)
   end
-
 end
