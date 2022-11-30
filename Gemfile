@@ -75,3 +75,5 @@ group :test do
 end
 
 gem "rspec-rails"
+
+gem "devise"
