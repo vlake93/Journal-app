@@ -1,0 +1,30 @@
+.landing-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 97.5vh;
+  width: 98vw;
+  padding: 5rem;
+
+  & .sign-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 2rem;
+    background-color: black;
+    height: 55rem;
+    width: 55rem;
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
