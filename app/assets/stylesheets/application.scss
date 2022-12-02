@@ -23,3 +23,43 @@
  html {
   font-size: 62.5%;
  }
+
+ body {
+  position: relative;
+
+  & .notice {
+    font-size: 2rem;
+    position: absolute;
+    top: 0rem;
+    background-color: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    animation: disappear 5s forwards;
+    }
+
+  
+  & .alert {
+    font-size: 2rem;
+    position: absolute;
+    top: 0rem;
+    background-color: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    animation: disappear 5s forwards;
+    }
+ }
+
+ @keyframes disappear {
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  0% {
+    opacity: 1;
+  }
+ }
