@@ -37,9 +37,14 @@
     bottom: 10rem;
     left: 20rem;
     pointer-events: none;
+    -webkit-text-stroke: .5px white;
+    animation: from-left 3s forwards;
     
     & h1 {
+      // position: absolute;
       font-size: 8rem;
+      margin-left: 20rem;
+      animation: appear 7.5s forwards;
     }
 
     & h3 {
@@ -47,5 +52,43 @@
     }
   }
 
+  .dot {
+    font-size: 7 rem;
+  }
 
+  .dot-one {
+    animation: appear 4.25s forwards;
+  }
+  .dot-two {
+    animation: appear 5.25s forwards;
+  }
+  .dot-three {
+    animation: appear 6.25s forwards;
+  }
+
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes from-left {
+  70% {
+    opacity: 1;
+  }
+
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
 }
