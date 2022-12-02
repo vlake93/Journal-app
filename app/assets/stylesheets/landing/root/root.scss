@@ -1,19 +1,22 @@
 .landing-page {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
-  padding: 5rem;
-  background: url("landing.png");
+  padding: 10rem 10rem 0 10rem;
+  background: url("small.png");
   background-size: cover;
   position: relative;
 
   & .sign-in {
+    margin-top: 10rem;
+    align-self: flex-end;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     color: white;
     font-size: 2rem;
     background-color: black;
@@ -34,17 +37,27 @@
 
   & .heading {
     position: absolute;
-    bottom: 10rem;
-    left: 20rem;
+    top: 2rem;
+    left: 15rem;
     pointer-events: none;
-    -webkit-text-stroke: .5px white;
+    color: rgb(220, 173, 123);
+    font-family: 'La Belle Aurore', cursive;
+
+    // -webkit-text-stroke: .5px white;
     animation: from-left 3s forwards;
-    
-    & h1 {
-      // position: absolute;
-      font-size: 8rem;
+
+    &-second {
       margin-left: 20rem;
-      animation: appear 7.5s forwards;
+    }
+    
+    & .boligrafo {
+      position: absolute;
+      top: 2rem;
+      right: -86rem;
+      font-size: 12rem;
+      margin-left: 20rem;
+      font-family: 'La Belle Aurore', cursive;
+      animation: appear 8s forwards;
     }
 
     & h3 {
@@ -66,7 +79,19 @@
     animation: appear 6.25s forwards;
   }
 
+  & .landing-footer {
+    background-color: rgb(220, 173, 123);
+    height: 10rem;
+    width: 100vw;
+    color: white;
+
+    & p {
+      font-size: 2rem;
+    }
+  }
 }
+
+
 
 @keyframes appear {
   100% {
