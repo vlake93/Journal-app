@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :category do
     resources :task
   end  
+  post 'category/create' => 'category#create', as: 'create_category'
+  get 'category/:id' => 'category#show', as: 'show_category'
+  patch 'category/:id', to: 'category#update'
 
   # Defines the root path route ("/")
   devise_for :users

@@ -1,0 +1,8 @@
+<h1>Show category</h1>
+
+<%= render "category/category" %>
+
+<div class="show-btn">
+  <%= link_to "Back to category", category_index_path %>
+  <%= button_to "Destroy this category", @category, method: :delete %>
+</div>
